@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}{% trans %} >ask{% endtrans %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- styles -->
+    <link href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='bootstrap/css/bootstrap-theme.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='styles/custom.css') }}" rel="stylesheet">
+    <!-- scripts -->
+    <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body>
+    <!-- /container -->
+    <div class="container">
+    {% block body %}
+    {% endblock %}
+    </div>
+  </body>
+  <script>
+  {% block script %}
+  {% endblock %}
+  </script>
+</html>
