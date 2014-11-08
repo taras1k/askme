@@ -1,4 +1,41 @@
 {% extends "layout.html" %}
+{% block background %}
+  url({{ url_for('static', filename=background_image) }})
+{% endblock background %}
 {% block body %}
-   Ask!
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 form-div">
+      <div class="description col-md-12">
+        <h3>
+          {% trans %}
+            Ask or die!
+          {% endtrans %}
+        </h3>
+        <p class="lead">
+          {% trans %}
+              "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+              praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias
+              excepturi sint occaecati cupiditate non provident, similique sunt in culpa
+              qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum
+              quidem rerum facilis est et expedita distinctio."
+          {% endtrans %}
+        </p>
+      </div>
+      <form class="form" role="form">
+        <div class="col-md-12 form-group">
+            <div class="input-group">
+              <div class="input-group-addon">{% trans %}Як{% endtrans %}</div>
+              <input class="form-control input-lg" id="questionInput"
+                     type="text"
+                     placeholder="{% trans %}Задати питання?{% endtrans %}">
+            </div>
+        </div>
+        <div class="col-md-12 form-group">
+            <button type="submit" class="btn btn-default btn-lg pull-right">
+              {% trans %}Спитати{% endtrans %}
+            </button>
+        </div>
+      </form>
+    </div>
+  </div>
 {% endblock %}

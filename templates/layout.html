@@ -4,13 +4,21 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}{% trans %} >ask{% endtrans %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- styles -->
-    <link href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
-    <link href="{{url_for('static', filename='bootstrap/css/bootstrap-theme.min.css')}}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap-theme.min.css') }}" rel="stylesheet">
     <link href="{{ url_for('static', filename='styles/custom.css') }}" rel="stylesheet">
+    <style type="text/css">
+      body {
+        background: {% block background %}url({{ url_for('static', filename='background_images/3002.jpg') }}) {% endblock background %} no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    </style>
     <!-- scripts -->
-    <script src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
     {% block head %}
     {% endblock %}
   </head>
