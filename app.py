@@ -3,21 +3,22 @@ from glob import glob
 from random import choice
 from flask import Flask, render_template, jsonify, request
 from flask.ext.babel import gettext as _
-from extensions import db, babel, admin
-from models import Question, Answer
 from flask.ext.admin.contrib.sqla import ModelView
+from flask.ext.script import Manager
+from flask.ext.migrate import Migrate, MigrateCommand
+from extensions import db, babel
+from models import Question, Answer
+from commands import ParseAnswers
 
 app = Flask(__name__)
 app.config.from_object('config')
 babel.init_app(app)
 db.init_app(app)
-admin.init_app(app)
 db.app = app
-
-
-#model admin
-admin.add_view(ModelView(Question, db.session))
-admin.add_view(ModelView(Answer, db.session))
+migrate = Migrate(app, db)
+manager = Manager(app)
+manager.add_command('db', MigrateCommand)
+manager.add_command('parse_answers', ParseAnswers)
 
 
 @app.errorhandler(404)
@@ -54,4 +55,4 @@ def post_answer():
 
 
 if __name__ == '__main__':
-    app.run()
+    manager.run()

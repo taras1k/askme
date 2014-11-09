@@ -3,4 +3,4 @@ SQLAlchemy==0.9.8
 Flask-SQLAlchemy==2.0
 sqlalchemy-migrate==0.9.2
 Flask-Babel==0.9
-Flask-Admin==1.0.8
+Flask-Migrate==1.2.0

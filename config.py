@@ -13,3 +13,4 @@ if DEBUG:
 
 BABEL_DEFAULT_LOCALE = 'uk'
 JQUERY_CDN_URL = '//ajax.googleapis.com/ajax/libs/jquery/'
+ANSWERS_DIR = os.path.join(BASE_DIR, 'answers')
