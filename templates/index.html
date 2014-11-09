@@ -1,4 +1,7 @@
 {% extends "layout.html" %}
+{% block head %}
+  <script src="{{ url_for('static', filename='scripts/form_ajax.js') }}"></script>
+{% endblock %}
 {% block background %}
   url({{ url_for('static', filename=background_image) }})
 {% endblock background %}
@@ -17,10 +20,10 @@
           {% endtrans %}
         </p>
       </div>
-      <form class="form" role="form">
+      <form class="form" role="form" id="question_form" action="/post_question">
         <div class="col-md-12 form-group">
           <input class="form-control input-lg" id="question"
-                 type="text"
+                 type="text" name="question"
                  placeholder="{% trans %}FORM.PLACEHOLDER{% endtrans %}">
         </div>
         <div class="col-md-12 form-group">
@@ -31,4 +34,7 @@
       </form>
     </div>
   </div>
+{% endblock %}
+{% block script %}
+  <script src="{{ url_for('static', filename='scripts/question_script.js') }}"></script>
 {% endblock %}

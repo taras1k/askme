@@ -18,6 +18,7 @@
       }
     </style>
     <!-- scripts -->
+    <script src="{{ config.JQUERY_CDN_URL }}2.1.1/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
     {% block head %}
     {% endblock %}
@@ -29,8 +30,6 @@
     {% endblock %}
     </div>
   </body>
-  <script>
   {% block script %}
   {% endblock %}
-  </script>
 </html>

@@ -12,3 +12,4 @@ if DEBUG:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
 
 BABEL_DEFAULT_LOCALE = 'uk'
+JQUERY_CDN_URL = '//ajax.googleapis.com/ajax/libs/jquery/'

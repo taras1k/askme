@@ -2,6 +2,7 @@ import os
 from glob import glob
 from random import choice
 from flask import Flask, render_template, jsonify, request
+from flask.ext.babel import gettext as _
 from extensions import db, babel, admin
 from models import Question, Answer
 from flask.ext.admin.contrib.sqla import ModelView
@@ -34,19 +35,23 @@ def index():
     data['background_image'] = '/'.join(background_path)
     return render_template('index.html', **data)
 
-@app.route('/post_answer', methods=['POST'])
+@app.route('/post_question', methods=['POST'])
 def post_answer():
     data = {}
-    import pdb; pdb.set_trace();
     if request.form['question']:
         question = Question()
         question.text = request.form['question']
         db.session.add(question)
         db.session.commit()
-        answer = Answers.query.all()
-        answer = choice(answer)
-        data['answer'] = dict(answer)
-    return jsonify(data)
+        answer = Answer.query.all()
+        if answer:
+            answer = choice(answer)
+            data['answer'] = answer.text
+        return jsonify(data)
+    else:
+        data['error'] = _('question is missing')
+        return jsonify(data), 400
+
 
 if __name__ == '__main__':
     app.run()

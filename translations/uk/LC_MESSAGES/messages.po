@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-11-09 13:48+0200\n"
+"POT-Creation-Date: 2014-11-09 22:03+0200\n"
 "PO-Revision-Date: 2014-11-09 00:55+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: uk <LL@li.org>\n"
@@ -18,25 +18,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 1.3\n"
 
-#: templates/index.html:10
+#: app.py:52
+msgid "question is missing"
+msgstr "Не встидайтесь, питайте!"
+
+#: templates/index.html:13
 msgid ""
 "\n"
 "            INDEX_PAGE.HEADER\n"
 "          "
 msgstr "Запитай!"
 
-#: templates/index.html:15
+#: templates/index.html:18
 msgid ""
 "\n"
 "            INDEX_PAGE.DESCRIPTION\n"
 "          "
-msgstr "Відповіді нра всі запитання"
+msgstr "Відповіді на всі запитання"
 
-#: templates/index.html:24
+#: templates/index.html:27
 msgid "FORM.PLACEHOLDER"
-msgstr "Як ставити запитання?"
+msgstr "Введіть своє запитання"
 
-#: templates/index.html:28
+#: templates/index.html:31
 msgid "FORM.SUBMIT"
 msgstr "Спитати"
 
