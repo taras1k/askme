@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2014-11-09 00:53+0200\n"
+"POT-Creation-Date: 2014-11-09 13:48+0200\n"
 "PO-Revision-Date: 2014-11-09 00:55+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: en <LL@li.org>\n"
@@ -29,23 +29,20 @@ msgid ""
 "\n"
 "            INDEX_PAGE.DESCRIPTION\n"
 "          "
-msgstr ""
-"Hello you can ask a question"
-""
+msgstr "Hello you can ask a question"
 
-#: templates/index.html:23
-msgid "FORM.PREDICATE"
-msgstr "Why"
-
-#: templates/index.html:26
+#: templates/index.html:24
 msgid "FORM.PLACEHOLDER"
 msgstr "ask a question?"
 
-#: templates/index.html:31
+#: templates/index.html:28
 msgid "FORM.SUBMIT"
 msgstr "Submit"
 
 #: templates/layout.html:5
 msgid " >ask"
 msgstr ""
+
+#~ msgid "FORM.PREDICATE"
+#~ msgstr "Why"
 
