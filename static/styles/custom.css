@@ -1,11 +1,24 @@
 .form-div {
   background:rgba(20, 20, 20, 0.6);
 }
-@media(max-width:767px){
-  .form-div {
-    padding-bottom: 4em;
-  }
-  .description {
-    padding-top: 5px;
-  }
+.answer {
+  background:rgba(20, 20, 20, 0.6);
+  height: 20em;
+  -moz-border-radius:20em;
+  -webkit-border-radius: 20em;
+  width: 20em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
+}
+.answer-text {
+  text-align: center;
+  padding-top: 42%;
+}
+#description {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.form-submit {
+  margin-bottom: 0;
 }
