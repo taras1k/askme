@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block background %}
+  url({{ url_for('static', filename=background_image) }})
+{% endblock %}
+{% block body %}
+  <div class="row">
+    <div id="answer">
+      <div class="answer">
+        <h1 id="answer_text" class="answer-text">
+          404
+        </h1>
+      </div>
+    </div>
+  </div>
+{% endblock %}

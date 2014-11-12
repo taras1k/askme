@@ -21,20 +21,25 @@ manager.add_command('db', MigrateCommand)
 manager.add_command('parse_answers', ParseAnswers)
 
 
-@app.errorhandler(404)
-def page_not_found(error):
-    return render_template('404.html'), 404
-
-
-@app.route('/')
-def index():
-    data = {}
+def _get_random_background():
     backgrounds_list = glob(os.path.join(
         app.config.get('BACKGROUND_IMAGES_DIRR'), '*.jpg'))
     background_path = choice(backgrounds_list)
     background_path = background_path.split('/')[-2:]
-    data['background_image'] = '/'.join(background_path)
+    return '/'.join(background_path)
+
+
+@app.errorhandler(404)
+def page_not_found(error):
+    data = {'background_image': _get_random_background()}
+    return render_template('404.html', **data), 404
+
+
+@app.route('/')
+def index():
+    data = {'background_image': _get_random_background()}
     return render_template('index.html', **data)
+
 
 @app.route('/post_question', methods=['POST'])
 def post_answer():
