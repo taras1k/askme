@@ -7,7 +7,7 @@ SECRET_KEY = environ.get('SECRET_KEY')
 
 SQLALCHEMY_DATABASE_URI = environ.get('SQLALCHEMY_DATABASE_URI')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(BASE_DIR, 'db_repository')
-DEBUG = environ.get('DEBUG', True)
+DEBUG = False
 if DEBUG:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(BASE_DIR, 'app.db')
 
