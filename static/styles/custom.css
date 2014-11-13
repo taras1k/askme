@@ -4,6 +4,7 @@
 .answer {
   background:rgba(20, 20, 20, 0.6);
   height: 20em;
+  border-radius:20em;
   -moz-border-radius:20em;
   -webkit-border-radius: 20em;
   width: 20em;
