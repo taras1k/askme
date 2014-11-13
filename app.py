@@ -3,7 +3,6 @@ from glob import glob
 from random import choice
 from flask import Flask, render_template, jsonify, request
 from flask.ext.babel import gettext as _
-from flask.ext.admin.contrib.sqla import ModelView
 from flask.ext.script import Manager
 from flask.ext.migrate import Migrate, MigrateCommand
 from extensions import db, babel
