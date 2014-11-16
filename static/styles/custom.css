@@ -1,3 +1,6 @@
+html {
+  min-height: 100%;
+}
 .form-div {
   background:rgba(20, 20, 20, 0.6);
 }
