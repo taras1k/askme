@@ -34,7 +34,7 @@ msgid ""
 "\n"
 "            INDEX_PAGE.DESCRIPTION\n"
 "          "
-msgstr "Відповіді на всі запитання"
+msgstr "відповіді, які змінять твоє життя!"
 
 #: templates/index.html:27
 msgid "FORM.PLACEHOLDER"
